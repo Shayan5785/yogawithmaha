@@ -41,7 +41,7 @@ export default function BenefitsSection() {
   ];
 
   return (
-    <section className="pt-24 pb-68 bg-secondary">
+    <section id="benefits" className="pt-24 pb-68 bg-secondary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-center text-primary text-[32px] font-semibold uppercase tracking-wide mb-16">
           Transform Your Life
@@ -69,7 +69,7 @@ export default function BenefitsSection() {
           ))}
         </div>
 
-        {/* Mobile */}
+        {/* Desktop */}
         <div className="hidden md:flex justify-center items-center relative">
           <div className="absolute flex gap-[250px] top-0">
             {benefitsPair1.map((benefit, index) => (

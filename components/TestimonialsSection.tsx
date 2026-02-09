@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Star, Quote, Heart, Users, Sparkles, ArrowRight } from 'lucide-react';
+import { Star, Quote, Users, Sparkles, ArrowRight } from 'lucide-react';
 
 // Shadcn UI Imports
 import {
@@ -23,59 +23,163 @@ const stats = [
 ];
 
 const reviews = [
-    {
-        id: 1,
-        name: 'Sarah Jenkins',
-        role: 'Vinyasa Regular',
-        image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&auto=format&fit=crop',
-        rating: 5,
-        text: "I've tried many studios in the city, but this one feels like home. The instructor's attention to alignment changed my practice completely.",
-    },
-    {
-        id: 2,
-        name: 'Michael Chen',
-        role: 'Beginner Yogi',
-        image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop',
-        rating: 5,
-        text: "As a guy who can barely touch his toes, I was intimidated. But the 'Basics' class was welcoming and judgment-free. My back pain has virtually disappeared.",
-    },
-    {
-        id: 3,
-        name: 'Emma Thompson',
-        role: 'Private Sessions',
-        image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop',
-        rating: 5,
-        text: "The private sessions are a game changer. We tailored a routine specifically for my runner's knee, and the recovery has been incredible.",
-    },
-    {
-        id: 4,
-        name: 'Priya Patel',
-        role: 'Yin & Meditation',
-        image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=200&auto=format&fit=crop',
-        rating: 5,
-        text: "This space is my sanctuary. The Yin classes on Friday evenings are the only way I can truly decompress after a stressful work week.",
-    },
-    {
-        id: 5,
-        name: 'David Rossi',
-        role: 'Workshop Attendee',
-        image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop',
-        rating: 4,
-        text: "The weekend workshops are intense in the best way possible. Deep dives into philosophy and advanced postures that you don't get in a standard class.",
-    },
-    {
-        id: 6,
-        name: 'Jessica Alva',
-        role: 'Online Student',
-        image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop',
-        rating: 5,
-        text: "I moved away last year but still join the online streams. The audio quality is perfect, and I still feel connected to the community.",
-    },
+  {
+    id: 1,
+    name: "A Queen",
+    rating: 5,
+    role: "",
+    image: "https://api.dicebear.com/7.x/initials/svg?seed=A+Queen",
+    text: "MAHA is an amazing yoga instructor — calm, patient, and truly inspiring. Her classes are always well-balanced, uplifting, and perfectly tailored to all levels..."
+  },
+  {
+    id: 2,
+    name: "A Rizvi",
+    rating: 1,
+    role: "",
+    image: "https://api.dicebear.com/7.x/initials/svg?seed=A+Rizvi",
+    text: "I contacted but after one response didn’t receive answer to my query. Clear and timely communication is essential for good service. I was hoping to get some assistance regarding classes and timings."
+  },
+  {
+    id: 3,
+    name: "Afsheen Ashraf",
+    rating: 5,
+    role: "",
+    image: "https://api.dicebear.com/7.x/initials/svg?seed=Afsheen+Ashraf",
+    text: "Thank you for being such a wonderful yoga teacher. You are very motivating and make everyone feel comfortable. I feel healthier and relaxed after every session."
+  },
+  {
+    id: 4,
+    name: "ammara kaleem",
+    rating: 5,
+    role: "",
+    image: "https://api.dicebear.com/7.x/initials/svg?seed=ammara+kaleem",
+    text: ""
+  },
+  {
+    id: 5,
+    name: "anum khurram",
+    rating: 5,
+    role: "",
+    image: "https://api.dicebear.com/7.x/initials/svg?seed=anum+khurram",
+    text: "Amazing experience! The instructor's guidance was top-notch, and the flow was perfect. Felt relaxed. Looking forward to the next session."
+  },
+  {
+    id: 6,
+    name: "Binish Umair",
+    rating: 5,
+    role: "",
+    image: "https://api.dicebear.com/7.x/initials/svg?seed=Binish+Umair",
+    text: "Best best best yoga instructor. She sees you and makes sure you feel better at the end of the session!! Highly recommended"
+  },
+  {
+    id: 7,
+    name: "Bushra Waheed",
+    rating: 5,
+    role: "",
+    image: "https://api.dicebear.com/7.x/initials/svg?seed=Bushra+Waheed",
+    text: "I began practicing yoga with Maha after attending one of her sessions at my gym. Although I’ve been working out for quite some time, her classes were equally challenging and refreshing in a completely different way."
+  },
+  {
+    id: 8,
+    name: "Erum Tariq",
+    rating: 5,
+    role: "",
+    image: "https://api.dicebear.com/7.x/initials/svg?seed=Erum+Tariq",
+    text: "Maha’s yoga classes are absolutely superb! The atmosphere is so calming and the instructor is top notch . Highly recommended!"
+  },
+  {
+    id: 9,
+    name: "Ghazna Usman",
+    rating: 5,
+    role: "",
+    image: "https://api.dicebear.com/7.x/initials/svg?seed=Ghazna+Usman",
+    text: "I have started yoga with Maha and I m loving every moment of it.. she is the best instructor focusing on every single person."
+  },
+  {
+    id: 10,
+    name: "Huma Mohiuddin",
+    rating: 5,
+    role: "",
+    image: "https://api.dicebear.com/7.x/initials/svg?seed=Huma+Mohiuddin",
+    text: "Maha is an excellent teacher. I always look forward for her class she has eyes on all her students and takes good care of postures. We have a very healthy environment in our class 😍"
+  },
+  {
+    id: 11,
+    name: "Maheen Farhan",
+    rating: 5,
+    role: "",
+    image: "https://api.dicebear.com/7.x/initials/svg?seed=Maheen+Farhan",
+    text: "We recently hosted a Chair Yoga session at our organization, and having her with us was an absolute delight! Not only was the session incredibly informative, but her energy and vibrant personality truly brought it to life."
+  },
+  {
+    id: 12,
+    name: "Mahnoor Ahsan",
+    rating: 5,
+    role: "",
+    image: "https://api.dicebear.com/7.x/initials/svg?seed=Mahnoor+Ahsan",
+    text: "Yoga with Maha is a great choice for anyone from beginners to intermediate practitioners. Maha is skilled and professional, and she makes it easy to learn and improve."
+  },
+  {
+    id: 13,
+    name: "Misbah Lakhia",
+    rating: 4,
+    role: "",
+    image: "https://api.dicebear.com/7.x/initials/svg?seed=Misbah+Lakhia",
+    text: "Maha .. your session was absolute therapy .. Rejuvenating experience .. Positive and calm vibes were another plus .."
+  },
+  {
+    id: 14,
+    name: "Nida Kizilbash",
+    rating: 5,
+    role: "",
+    image: "https://api.dicebear.com/7.x/initials/svg?seed=Nida+Kizilbash",
+    text: "It's a place that allows me to set aside my usual routine tasks and responsibilities aside for an hour. In that hour I am just with myself; rejuvenating, relaxing and unwinding."
+  },
+  {
+    id: 15,
+    name: "Noshin Waseem",
+    rating: 5,
+    role: "",
+    image: "https://api.dicebear.com/7.x/initials/svg?seed=Noshin+Waseem",
+    text: "Very calm and refreshing. Much needed after our monotonous routines. Well organised and highly recommended! 🌊🤍"
+  },
+  {
+    id: 16,
+    name: "Ruqya K",
+    rating: 5,
+    role: "",
+    image: "https://api.dicebear.com/7.x/initials/svg?seed=Ruqya+K",
+    text: "Maha has been my yoga instructor for the past two years. Not only she is a good instructor, she also explains the anatomy behind every pose with its benefits."
+  },
+  {
+    id: 17,
+    name: "sharmeen hussain",
+    rating: 5,
+    role: "",
+    image: "https://api.dicebear.com/7.x/initials/svg?seed=sharmeen+hussain",
+    text: "Yoga with Maha is a fantastic experience. I’m really enjoying the classes. Much needed me-time to break the demanding schedule of the week."
+  },
+  {
+    id: 18,
+    name: "Smart Upgrade Official",
+    rating: 5,
+    role: "",
+    image: "https://api.dicebear.com/7.x/initials/svg?seed=Smart+Upgrade+Official",
+    text: "Maha’s yoga classes are deeply relaxing and truly rejuvenating. Her calm energy, thoughtful guidance, and soothing voice helps me release stress and feel more connected to my body."
+  },
+  {
+    id: 19,
+    name: "Warda Jawed",
+    rating: 5,
+    role: "",
+    image: "https://api.dicebear.com/7.x/initials/svg?seed=Warda+Jawed",
+    text: "I love how Maha push my limits and motivate me I really never thought yoga would shape my body but it is all due to Maha mantra and I m glad how she works on my body ."
+  },
 ];
 
 const TestimonialsSection = () => {
     return (
-        <section className="py-20 sm:py-32 bg-secondary/20 relative overflow-hidden">
+        <section id="stories" className="py-20 sm:py-32 bg-secondary/20 relative overflow-hidden">
 
             {/* Background Decor */}
             <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
@@ -139,7 +243,7 @@ const TestimonialsSection = () => {
 
                                                 {/* Text */}
                                                 <p className="text-foreground/80 leading-relaxed mb-8 flex-grow font-medium relative z-10 line-clamp-4">
-                                                    "{review.text}"
+                                                    {review.text}
                                                 </p>
 
                                                 {/* User Profile */}

@@ -40,7 +40,7 @@ const faqs = [
         id: 3,
         question: "What should I wear to class?",
         answer: "Wear clothing that allows you to move freely and breathe easily. Leggings, joggers, or shorts coupled with a fitted t-shirt or tank top work best. You want to avoid anything too baggy that might get in the way during inversions (like Downward Dog).",
-        category: 'beginners' // Also fits logistics, but putting here for simplicity
+        category: 'beginners'
     },
     {
         id: 4,
@@ -94,7 +94,7 @@ const FaqSection = () => {
     };
 
     return (
-        <section className='relative'>
+        <section id="faqs" className='relative'>
 
             <div className="relative pt-32 pb-20 px-4 md:px-12 text-center overflow-hidden bg-background">
                 <div className="max-w-4xl mx-auto relative z-10">
@@ -215,11 +215,11 @@ const FaqSection = () => {
                             I'm here to help you on your wellness journey. If you couldn't find what you were looking for, feel free to reach out directly.
                         </p>
                         <div className="flex flex-wrap gap-4">
-                            <a href="#" className="bg-primary text-primary-foreground px-8 py-3 rounded-full font-semibold hover:bg-primary/90 transition shadow-md flex items-center gap-2">
+                            <a href="#contact" className="bg-primary text-primary-foreground px-8 py-3 rounded-full font-semibold hover:bg-primary/90 transition shadow-md flex items-center gap-2">
                                 <Mail className="w-4 h-4" />
                                 Contact Me
                             </a>
-                            <a href="#" className="bg-transparent border-2 border-primary text-primary px-8 py-3 rounded-full font-semibold hover:bg-secondary transition flex items-center gap-2">
+                            <a href="https://wa.me/#" className="bg-transparent border-2 border-primary text-primary px-8 py-3 rounded-full font-semibold hover:bg-secondary transition flex items-center gap-2" target="_blank" rel="noopener noreferrer">
                                 <MessageCircle className="w-4 h-4" />
                                 Chat on WhatsApp
                             </a>
@@ -229,8 +229,6 @@ const FaqSection = () => {
                     <div className="w-full md:w-1/3 flex justify-center relative z-10">
                         <div className="w-32 h-32 md:w-40 md:h-40 bg-primary/10 rounded-full flex items-center justify-center shadow-inner">
                             <Image src="/flowers.png" width={120} height={120} alt='' className='bg-red'/>
-
-                            {/* <Sparkles className="w-16 h-16 text-primary opacity-80" /> */}
                         </div>
                     </div>
 
