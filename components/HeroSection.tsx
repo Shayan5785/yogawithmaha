@@ -50,7 +50,7 @@ export default function HeroSection() {
                     <div className="relative">
                         <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white/50">
                             <Image
-                                src="/hero.jfif"
+                                src="/hero.jpg"
                                 width={500}
                                 height={450}
                                 alt='Yoga Instructor Maha in a pose'

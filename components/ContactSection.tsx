@@ -177,7 +177,6 @@ const ContactSection = () => {
                             title="Yoga with Maha studio location — North Nazimabad, Karachi"
                             className="absolute inset-0 w-full h-full border-0 grayscale-[0.2] contrast-[0.9]"
                             allowFullScreen={false}
-                            loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
                         ></iframe>
 
