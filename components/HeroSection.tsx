@@ -42,7 +42,7 @@ export default function HeroSection() {
                         {/* Location Tag */}
                         <p className="text-muted text-sm mt-6 flex items-center gap-2 font-medium">
                             <MapPin className='text-primary w-5 h-5' />
-                            Block F, North Nazimabad, Karachi
+                            Block F, North Nazimabad, Karachi, Pakistan.
                         </p>
                     </div>
 
@@ -50,11 +50,11 @@ export default function HeroSection() {
                     <div className="relative">
                         <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white/50">
                             <Image
-                                src="/hero.png"
+                                src="/hero.jfif"
                                 width={500}
                                 height={450}
                                 alt='Yoga Instructor Maha in a pose'
-                                className='w-full object-cover'
+                                className='w-full h-[450px] object-cover object-center'
                                 priority // Vital for loading speed
                             />
                         </div>
@@ -62,7 +62,7 @@ export default function HeroSection() {
                         {/* Floating Badge */}
                         <div className="absolute bottom-6 right-[-10px] md:right-[-20px] bg-white rounded-xl p-4 shadow-xl border border-primary/10 animate-in slide-in-from-bottom-4 duration-1000">
                             <p className="text-sm font-bold text-primary">New Batches</p>
-                            <p className="text-xs text-muted-foreground">Starting this week</p>
+                            <p className="text-xs">Starting this week</p>
                         </div>
                     </div>
                 </div>

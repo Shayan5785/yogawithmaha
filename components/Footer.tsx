@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Linkedin, Youtube, Mail, MapPin, Code2 } from "lucide-react";
+import { Instagram, Linkedin, Mail, MapPin, Phone, Code2 } from "lucide-react";
 import Image from "next/image";
 
 export default function Footer() {
@@ -43,15 +43,18 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-primary-foreground/80">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 shrink-0 text-secondary" />
-                <span>
-                  Block F, North Nazimabad,<br />
-                  Karachi, Pakistan.
-                </span>
+                <span>Block F, North Nazimabad, Karachi, Pakistan.</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 shrink-0 text-secondary" />
                 <a href="mailto:yogawithmahaofficial@gmail.com" className="hover:text-white transition">
                   yogawithmahaofficial@gmail.com
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone className="w-5 h-5 shrink-0 text-secondary" />
+                <a href="tel:+923008288402" className="hover:text-white transition">
+                  +923008288402
                 </a>
               </li>
             </ul>
@@ -62,7 +65,7 @@ export default function Footer() {
             <h4 className="font-heading font-semibold text-lg mb-4">Follow Us</h4>
             <div className="flex gap-4">
               <a
-                href="https://www.instagram.com/yogawithmaha/"
+                href="https://www.instagram.com/yogawithmaha"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -71,25 +74,7 @@ export default function Footer() {
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="https://www.facebook.com/p/Yoga-with-Maha-61553702105263/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook"
-                className="bg-primary-foreground/10 p-2 rounded-full hover:bg-secondary hover:text-primary transition-all"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="https://youtu.be/KY6xCg2wzUQ?si=nCzm-oeyatWLPlUm"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="YouTube"
-                className="bg-primary-foreground/10 p-2 rounded-full hover:bg-secondary hover:text-primary transition-all"
-              >
-                <Youtube className="w-5 h-5" />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/yoga-with-maha/?originalSubdomain=pk"
+                href="https://www.linkedin.com/company/yoga-with-maha"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"

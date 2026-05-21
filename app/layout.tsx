@@ -52,7 +52,7 @@ export default function RootLayout({
   return (
     // 3. Injecting Font Variables into the HTML
     <html lang="en" className={`${abhaya.className} ${roboto.className}`}>
-      <body className="font-body antialiased bg-[#F8F7FF] text-[#2D1B4D]">
+      <body className="font-body antialiased bg-secondary/30 text-[#2D1B4D]">
         {children}
         <Analytics />
       </body>

@@ -1,49 +1,74 @@
 import Image from "next/image"
+import { Check, CheckCircle, Flower2, Star, StarHalf } from "lucide-react"
+import Link from "next/link"
+
+const highlights = [
+    "Personalized attention in every session",
+    "Focus on breathwork, alignment, and mindfulness",
+    "Holistic integration of yoga philosophy with daily life",
+    "Special emphasis on stress management and emotional balance",
+    "Beginner-friendly and progressive teaching structure",
+]
 
 export default function InstructorSection() {
     return (
-        <section id="instructor" className="py-12 sm:py-24">
+        <section id="instructor" className="py-12 sm:py-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="text-center text-primary text-[32px] font-semibold uppercase tracking-wide mb-12">
-                    Meet Maha
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 items-center">
-                    <div className="h-full flex flex-col items-center justify-between ">
-                        <Image src="/instructor.png" alt="Instructor" width={300} height={300} className='mx-auto' />
+                {/* Header Section */}
+                <div className="text-center max-w-3xl mx-auto mb-12">
+                    <p className="text-primary text-xs font-bold uppercase tracking-widest font-sans mb-3">
+                        MEET YOUR GUIDE
+                    </p>
+                    <h2 className="text-primary text-3xl md:text-4xl font-heading font-bold mb-4 text-foreground">
+                        The Heart Behind YogaWithMaha
+                    </h2>
+                    <p className="text-muted text-lg font-sans leading-relaxed">
+                        Led by internationally certified instructor Maha, creating a safe space where well-being starts on the mat and flows into every role we play.
+                    </p>
+                </div>
 
-                        <div className="flex flex-wrap justify-center gap-6 my-10 md:my-0">
-                            <div className="text-center border-4 border-primary rounded-tl-[60px] rounded-br-[60px] p-6">
-                                <p className="text-2xl font-bold text-primary">10+</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 items-center">
+                    <div className="h-full flex flex-col items-center justify-between px-8">
+                        <Image src="/about4.jpg" alt="Instructor" width={300} height={300} className='w-full rounded-4xl border-5 border-primary mb-6' />
+
+                        <div className="flex flex-wrap justify-center md:justify-between gap-5 md:gap-0 w-full my-10 md:my-0 ">
+                            <div className="text-center border-4 border-primary rounded-tl-[40px] rounded-br-[40px] px-4 py-2">
+                                <p className="text-2xl font-bold text-primary">4+</p>
                                 <p className="text-sm text-muted">Years Experience</p>
                             </div>
-                            <div className="text-center border-4 border-primary rounded-tl-[60px] rounded-br-[60px] p-6">
-                                <p className="text-2xl font-bold text-primary">500+</p>
+                            <div className="text-center border-4 border-primary rounded-tl-[40px] rounded-br-[40px] px-4 py-2">
+                                <p className="text-2xl font-bold text-primary">5000+</p>
                                 <p className="text-sm text-muted">Students Trained</p>
                             </div>
-                            <div className="text-center border-4 border-primary rounded-tl-[60px] rounded-br-[60px] p-6">
-                                <p className="text-2xl font-bold text-primary">100+</p>
-                                <p className="text-sm text-muted">Classes Taught</p>
+                            <div className="text-center border-4 border-primary rounded-tl-[40px] rounded-br-[40px] px-4 py-2">
+                                <p className="text-2xl font-bold text-primary">1500+</p>
+                                <p className="text-sm text-muted">Sessions Conducted</p>
                             </div>
                         </div>
                     </div>
                     <div>
-                        <h3 className="text-2xl sm:text-3xl font-extrabold mb-6 text-balance">
+                        {/* <h3 className="text-2xl sm:text-3xl font-extrabold mb-6 text-balance">
                             The Heart Behind YogaWithMaha
-                        </h3>
-                        <p className="text-foreground leading-relaxed mb-4">
-                            Maha Ashar is an internationally certified Yoga Trainer from Yoga Alliance, USA, and the soul behind YogaWithMaha—a space created to inspire balance, strength, and mindful living. A mother, professional, and lifelong learner, Maha brings real-life experience, empathy, and authenticity into her teaching.
-                        </p>
+                        </h3> */}
                         <p className="text-foreground leading-relaxed mb-6">
-                            With a strong background in banking and technology, Maha understands the pressures of modern life—the long hours, constant demands, and emotional fatigue that often disconnect us from our wellbeing. Yoga became her anchor, transforming not only her body but her mindset, energy, and purpose.
-                            As a proud mother of two, Maha believes wellbeing starts at home and flows into every role we play in life. Her approach to yoga is practical, inclusive, and deeply human—designed for real people, real challenges, and real transformation.
+                            YogaWithMaha is founded and led by Maha & Ashar, a dynamic couple dedicated to holistic wellness. As the lead guide, Maha is a passionate yoga practitioner and Internationally certified instructor (Yoga Alliance USA). She helps individuals reconnect with their body, mind, and breath. Her teaching philosophy blends traditional yogic wisdom with modern lifestyle needs, making yoga accessible, practical, and truly transformative. With a deep understanding of the pressures of modern life, Maha creates a safe space where well-being starts on the mat and flows into every role we play.
                         </p>
-                        <p className="text-foreground leading-relaxed mb-6">
-                            Through YogaWithMaha, her mission is simple yet powerful:
-                            to help individuals reconnect with themselves, improve their lifestyle, and cultivate physical, mental, and emotional wellbeing. Maha doesn’t just teach yoga, she guides people toward a healthier, more conscious, and more fulfilled way of living.
-                        </p>
-                        <button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 py-6">
-                            View Certificate
-                        </button>
+                        <ul className="space-y-3 mb-8">
+                            {highlights.map((item) => (
+                                <li key={item} className="flex items-start gap-3 text-foreground">
+                                    <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-primary">
+                                        <CheckCircle className="h-4 w-4" aria-hidden />
+                                    </span>
+                                    <span className="leading-relaxed">{item}</span>
+                                </li>
+                            ))}
+                        </ul>
+                        <div className="flex items-center gap-6 flex-col md:flex-row">
+                            <button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 py-4 cursor-pointer w-full md:w-auto">
+                                View Certificate
+                            </button>
+                            <Link href={''} className="text-primary hover:text-blue-500 hover:underline">View Yoga Alliance Registry</Link>
+                        </div>
                     </div>
                 </div>
             </div>

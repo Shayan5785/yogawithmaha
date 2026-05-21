@@ -16,15 +16,19 @@ const ContactSection = () => {
     };
 
     return (
-        <section id="contact" className="py-12 sm:py-24 bg-background">
+        <section id="contact" className="py-12 sm:py-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* Header - Aligned with your Gallery changes */}
-                <div className="text-center mb-12">
-                    <h2 className="text-primary text-[32px] font-serif font-bold mb-4">
+                {/* Header Section */}
+                <div className="text-center max-w-3xl mx-auto mb-12">
+                    <p className="text-primary text-xs font-bold uppercase tracking-widest font-sans mb-3">
+                        REACH OUT
+                    </p>
+                    <h2 className="text-primary text-3xl md:text-4xl font-heading font-bold mb-4 text-foreground">
                         Get in Touch
                     </h2>
-                    <p className="text-muted text-lg max-w-2xl mx-auto">
+                    <p className="text-muted text-lg font-sans leading-relaxed">
                         Have questions about our classes or want to book a private session? Drop by the studio or send us a message below.
                     </p>
                 </div>
@@ -149,19 +153,19 @@ const ContactSection = () => {
                                 <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-primary shrink-0">
                                     <MapPin className="w-5 h-5" />
                                 </div>
-                                <p className="font-medium">123 Wellness Ave, Suite 400<br />San Francisco, CA 94103</p>
+                                <p className="font-medium">Block F, North Nazimabad</p>
                             </div>
                             <div className="flex items-center gap-4 text-muted">
                                 <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-primary shrink-0">
                                     <Mail className="w-5 h-5" />
                                 </div>
-                                <a href="mailto:hello@serenityflow.com" className="font-medium hover:text-primary transition">hello@serenityflow.com</a>
+                                <a href="mailto:yogawithmahaofficial@gmail.com" className="font-medium hover:text-primary transition">yogawithmahaofficial@gmail.com</a>
                             </div>
                             <div className="flex items-center gap-4 text-muted">
                                 <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-primary shrink-0">
                                     <Phone className="w-5 h-5" />
                                 </div>
-                                <p className="font-medium">+1 (555) 123-4567</p>
+                                <a href="tel:+923008288402" className="font-medium hover:text-primary transition">+92 300 8288402</a>
                             </div>
                         </div>
                     </div>
@@ -169,7 +173,8 @@ const ContactSection = () => {
                     {/* Right Column: Map & Visual */}
                     <div className="lg:col-span-7 relative h-[500px] lg:h-auto order-1 lg:order-2 bg-secondary/30">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0636838349277!2d-122.4194!3d37.7749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c6c8f4459%3A0xb10ed6d9b5050fa5!2sTwitter+HQ!5e0!3m2!1sen!2sus!4v1530644919563"
+                            src="https://maps.google.com/maps?q=Block+F,+North+Nazimabad,+Karachi,+Pakistan&hl=en&z=15&output=embed"
+                            title="Yoga with Maha studio location — North Nazimabad, Karachi"
                             className="absolute inset-0 w-full h-full border-0 grayscale-[0.2] contrast-[0.9]"
                             allowFullScreen={false}
                             loading="lazy"
@@ -192,7 +197,12 @@ const ContactSection = () => {
                                         <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
                                         Open Now • Closes 8PM
                                     </p>
-                                    <a href="#" className="text-xs text-primary font-semibold mt-1 hover:underline block">
+                                    <a
+                                        href="https://www.google.com/maps/dir/?api=1&destination=Block+F,+North+Nazimabad,+Karachi,+Pakistan"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-xs text-primary font-semibold mt-1 hover:underline block"
+                                    >
                                         Get Directions
                                     </a>
                                 </div>

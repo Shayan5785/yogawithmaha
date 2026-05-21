@@ -6,44 +6,44 @@ import { CheckCircle, Lock, Sun, Sparkles, X, ZoomIn } from 'lucide-react';
 const galleryItems = [
     {
         id: 0,
-        title: 'The Practice Room',
-        description: 'Spacious, light-filled, and equipped with premium mats.',
+        title: 'The Main Sanctuary',
+        description: 'A calm, minimalist environment designed for deep practice, complete with premium mats, blocks, and bolsters.',
         // Bento Grid Logic: Spans 2 cols & 2 rows on large screens
         className: 'md:col-span-2 md:row-span-2 h-64 md:h-full',
-        src: 'https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?q=80&w=880&auto=format&fit=crop',
-        alt: 'Main Yoga Studio Floor',
+        src: '/spaceThree.jpg',
+        alt: 'Warm, peaceful yoga studio floor with mats laid out',
     },
     {
         id: 1,
-        title: 'Reception',
-        description: 'A warm welcome awaits you.',
+        title: 'Immersive Flow',
+        description: 'Ambient, mood-lit sessions designed to help you focus inward and tune out the outside world.',
         className: 'h-64 md:h-auto',
-        src: 'https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1000&auto=format&fit=crop',
-        alt: 'Reception Area',
+        src: '/spaceOne.jpg',
+        alt: 'Students practicing yoga in a room with ambient purple lighting',
     },
     {
         id: 2,
-        title: 'Changing Suites',
-        description: 'Secure lockers & private changing areas.',
+        title: 'Mindful Details',
+        description: 'Thoughtful touches and beautiful mandala setups for our specialized healing circles and wellness events.',
         className: 'h-64 md:h-auto',
-        src: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=1000&auto=format&fit=crop',
-        alt: 'Changing Rooms',
+        src: '/spaceTwo.jpg',
+        alt: 'Hand holding a mindful quote card over a flower mandala',
     },
     {
         id: 3,
-        title: 'Amenities',
-        description: 'Complimentary tea, towels, and props.',
+        title: 'Guided Practice',
+        description: 'Intimate, focused group sessions where every student receives personalized attention and alignment cues.',
         className: 'md:col-span-2 h-64 md:h-auto', // Span 2 cols to fill gap
-        src: 'https://images.unsplash.com/photo-1611077094612-943a95a2708b?q=80&w=1169&auto=format&fit=crop',
-        alt: 'Studio Amenities',
+        src: '/space 4.jpeg',
+        alt: 'Maha leading a structured, bright group yoga class',
     },
 ];
 
 const features = [
-    { icon: <CheckCircle className="w-6 h-6 text-primary mb-2" />, label: 'Spotless Clean' },
-    { icon: <Lock className="w-6 h-6 text-primary mb-2" />, label: 'Secure Lockers' },
-    { icon: <Sun className="w-6 h-6 text-primary mb-2" />, label: 'Natural Light' },
-    { icon: <Sparkles className="w-6 h-6 text-primary mb-2" />, label: 'Premium Mats' },
+    { icon: <CheckCircle className="w-6 h-6 text-primary" />, label: 'Spotless Clean' },
+    { icon: <Lock className="w-6 h-6 text-primary" />, label: 'Secure Lockers' },
+    { icon: <Sun className="w-6 h-6 text-primary" />, label: 'Natural Light' },
+    { icon: <Sparkles className="w-6 h-6 text-primary" />, label: 'Premium Mats' },
 ];
 
 const SanctuaryGallery = () => {
@@ -69,7 +69,7 @@ const SanctuaryGallery = () => {
     }, []);
 
     return (
-        <section id="gallery" className="py-16 sm:py-24 bg-background">
+        <section id="gallery"  className="py-12 sm:py-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header Section */}
                 <div className="text-center max-w-3xl mx-auto mb-12">
@@ -80,7 +80,7 @@ const SanctuaryGallery = () => {
                         Experience the Space
                     </h2>
                     <p className="text-muted text-lg font-sans leading-relaxed">
-                        We've curated a peaceful, pristine environment designed to help you disconnect from the noise and reconnect with yourself.
+                        YogaWithMaha provides a calm, minimal, and healing environment designed for deep practice.
                     </p>
                 </div>
 

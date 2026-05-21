@@ -1,20 +1,17 @@
-'use client' // <--- This is REQUIRED for onClick and useState
+'use client'
 
 import { useState } from 'react'
-import { Menu, X } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import { Instagram, Linkedin, Menu, X } from 'lucide-react'
 import Image from 'next/image'
 
 export default function Header() {
-  // We move the state INSIDE the component so the Parent (Layout) doesn't need to be client-side
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
-  // Helper to smooth scroll and close menu
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, id: string) => {
     e.preventDefault();
     const element = document.getElementById(id);
     if (element) {
-      const headerOffset = 80; // Height of your sticky header + padding
+      const headerOffset = 80;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.scrollY - headerOffset;
 
@@ -36,8 +33,8 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-border shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 py-3 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-xs border-b border-border shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 py-3 sm:px-6 lg:px-8 relative">
         <div className="flex items-center justify-between h-16">
 
           {/* Logo Section */}
@@ -50,7 +47,6 @@ export default function Header() {
               className='w-12 h-12 rounded-full object-cover border border-primary/20'
               priority
             />
-            {/* Added Text Logo for SEO/Branding */}
             <span className="font-heading font-bold text-xl text-primary hidden sm:block">
               Yoga with Maha
             </span>
@@ -70,14 +66,26 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Desktop CTA */}
-          <div className="hidden md:block">
-            <Button
-              onClick={(e) => handleScroll(e as any, 'contact')}
-              className="bg-primary hover:bg-primary/90 text-white rounded-full px-6 shadow-md hover:shadow-lg transition-all"
+          {/* Desktop Socials */}
+          <div className="md:flex gap-4 hidden">
+            <a
+              href="https://www.instagram.com/yogawithmaha"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="bg-primary-foreground/10 p-2 rounded-full hover:bg-secondary hover:text-primary transition-all"
             >
-              Book a Free Trial
-            </Button>
+              <Instagram className="w-5 h-5" />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/yoga-with-maha"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="bg-primary-foreground/10 p-2 rounded-full hover:bg-secondary hover:text-primary transition-all"
+            >
+              <Linkedin className="w-5 h-5" />
+            </a>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -89,31 +97,46 @@ export default function Header() {
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-
-        {/* Mobile Navigation Dropdown */}
-        {mobileMenuOpen && (
-          <nav className="md:hidden py-4 space-y-2 border-t border-border/50 animate-in slide-in-from-top-2 duration-200">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={`#${link.href}`}
-                onClick={(e) => handleScroll(e, link.href)}
-                className="block px-4 py-3 text-base font-medium text-foreground hover:bg-secondary/50 hover:text-primary rounded-lg transition-colors"
-              >
-                {link.name}
-              </a>
-            ))}
-            <div className="pt-4 px-4">
-              <Button
-                className="w-full bg-primary text-white rounded-full py-6 text-lg"
-                onClick={(e) => handleScroll(e as any, 'contact')}
-              >
-                Book a Free Trial
-              </Button>
-            </div>
-          </nav>
-        )}
       </div>
+
+      {/* Mobile Navigation Dropdown - Now Buttery Smooth */}
+      <nav
+        className={`absolute top-full left-0 w-full bg-white/95 backdrop-blur-md shadow-lg border-b border-border md:hidden py-4 px-6 space-y-2 z-50 transition-all duration-300 ease-in-out origin-top ${mobileMenuOpen
+            ? 'opacity-100 translate-y-0 visible pointer-events-auto'
+            : 'opacity-0 -translate-y-4 invisible pointer-events-none'
+          }`}
+      >
+        {navLinks.map((link) => (
+          <a
+            key={link.name}
+            href={`#${link.href}`}
+            onClick={(e) => handleScroll(e, link.href)}
+            className="block px-4 py-3 text-base font-medium text-foreground hover:bg-secondary/50 hover:text-primary rounded-lg transition-colors"
+          >
+            {link.name}
+          </a>
+        ))}
+        <div className="flex gap-4 pt-4 px-4 border-t border-border/50 mt-2">
+          <a
+            href="https://www.instagram.com/yogawithmaha"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            className="bg-primary/10 p-2 rounded-full hover:bg-secondary hover:text-primary transition-all"
+          >
+            <Instagram className="w-5 h-5" />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/yoga-with-maha"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="bg-primary/10 p-2 rounded-full hover:bg-secondary hover:text-primary transition-all"
+          >
+            <Linkedin className="w-5 h-5" />
+          </a>
+        </div>
+      </nav>
     </header>
   )
 }

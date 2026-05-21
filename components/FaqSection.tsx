@@ -14,6 +14,7 @@ import {
     Mail,
     MessageCircle
 } from 'lucide-react';
+import Link from 'next/link';
 
 // --- Data Configuration ---
 const categories = [
@@ -95,8 +96,11 @@ const FaqSection = () => {
 
     return (
         <section id="faqs" className='relative'>
+            {/* Background Decor */}
+            {/* <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none" /> */}
+            <div className="absolute top-0 left-0 -translate-y-1/2 -translate-x-1/2 w-[30rem] h-[30rem] bg-primary/5 rounded-full blur-3xl pointer-events-none" />
 
-            <div className="relative pt-32 pb-20 px-4 md:px-12 text-center overflow-hidden bg-background">
+            <div className="relative pt-32 pb-20 px-4 md:px-12 text-center overflow-hidden">
                 <div className="max-w-4xl mx-auto relative z-10">
                     <div className="inline-flex items-center gap-2 p-2 rounded-full bg-secondary text-primary mb-4 pr-4">
                         <span className="bg-primary/10 p-1 rounded-full">
@@ -113,10 +117,10 @@ const FaqSection = () => {
                 </div>
 
                 {/* Decorative Background Element */}
-                <div className="absolute top-0 left-0 w-full h-full -z-10 opacity-5 pointer-events-none">
+                {/* <div className="absolute top-0 left-0 w-full h-full -z-10 opacity-5 pointer-events-none">
                     <div className="absolute top-10 right-10 w-64 h-64 bg-primary rounded-full blur-3xl"></div>
                     <div className="absolute bottom-10 left-10 w-96 h-96 bg-primary rounded-full blur-3xl"></div>
-                </div>
+                </div> */}
             </div>
 
             <div className="flex-grow w-full max-w-6xl mx-auto px-4 md:px-8 pb-24 grid md:grid-cols-12 gap-12">
@@ -215,20 +219,20 @@ const FaqSection = () => {
                             I'm here to help you on your wellness journey. If you couldn't find what you were looking for, feel free to reach out directly.
                         </p>
                         <div className="flex flex-wrap gap-4">
-                            <a href="#contact" className="bg-primary text-primary-foreground px-8 py-3 rounded-full font-semibold hover:bg-primary/90 transition shadow-md flex items-center gap-2">
+                            <Link href="#contact" className="bg-primary text-primary-foreground px-8 py-3 rounded-full font-semibold hover:bg-primary/90 transition shadow-md flex items-center gap-2 justify-center w-full md:w-auto">
                                 <Mail className="w-4 h-4" />
                                 Contact Me
-                            </a>
-                            <a href="https://wa.me/#" className="bg-transparent border-2 border-primary text-primary px-8 py-3 rounded-full font-semibold hover:bg-secondary transition flex items-center gap-2" target="_blank" rel="noopener noreferrer">
+                            </Link>
+                            <Link href="https://wa.me/#" className="bg-transparent border-2 border-primary text-primary px-8 py-3 rounded-full font-semibold hover:bg-secondary transition flex items-center gap-2 justify-center w-full md:w-auto" target="_blank" rel="noopener noreferrer">
                                 <MessageCircle className="w-4 h-4" />
                                 Chat on WhatsApp
-                            </a>
+                            </Link>
                         </div>
                     </div>
 
                     <div className="w-full md:w-1/3 flex justify-center relative z-10">
                         <div className="w-32 h-32 md:w-40 md:h-40 bg-primary/10 rounded-full flex items-center justify-center shadow-inner">
-                            <Image src="/flowers.png" width={120} height={120} alt='' className='bg-red'/>
+                            <Image src="/flowers.png" width={120} height={120} alt='' className='bg-red' />
                         </div>
                     </div>
 
